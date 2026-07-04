@@ -8,9 +8,7 @@ const PROFILE = {
 
 const LINKS = [
   { label: "Listen to \"alright\" on YouTube", url: "https://www.youtube.com/watch?v=3HXIAYWWkR4", icon: "youtube" },
-  { label: "Spotify", url: "https://open.spotify.com/", icon: "spotify" }, // TODO: replace with real link
-  { label: "Apple Music", url: "https://music.apple.com/", icon: "apple" }, // TODO: replace with real link
-  { label: "SoundCloud", url: "https://soundcloud.com/", icon: "soundcloud" }, // TODO: replace with real link
+  { label: "Spotify", url: "https://open.spotify.com/artist/2OMD9iVn3TffB9Vr63p9lf", icon: "spotify" },
+  { label: "Apple Music", url: "https://music.apple.com/us/album/alright-single/6785384713", icon: "apple" },
   { label: "Instagram", url: "https://instagram.com/devrxddy", icon: "instagram" },
-  { label: "TikTok", url: "https://tiktok.com/", icon: "tiktok" }, // TODO: replace with real link
 ];
