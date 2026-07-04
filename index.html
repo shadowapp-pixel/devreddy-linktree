@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Artist Name — Listen & Follow</title>
+<meta name="description" content="Listen to Artist Name on all platforms and follow on social media." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-blur"></div>
+
+  <main class="card">
+    <img class="avatar" src="avatar.jpg" alt="Artist Name" onerror="this.style.display='none'" />
+    <h1 class="name">Artist Name</h1>
+    <p class="bio">New single "Track Title" out now 🎧</p>
+
+    <section class="links" id="links">
+      <!-- Links are rendered by script.js from config.js -->
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> <span id="footer-name"></span></p>
+    </footer>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
