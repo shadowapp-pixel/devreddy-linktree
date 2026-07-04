@@ -42,6 +42,65 @@ function renderLinks() {
   });
 }
 
+function setupShare() {
+  const btn = document.getElementById("share-btn");
+  const label = btn.querySelector(".share-label");
+  const defaultLabel = label.textContent;
+
+  btn.addEventListener("click", async () => {
+    const shareData = {
+      title: PROFILE.name,
+      text: PROFILE.bio,
+      url: window.location.href,
+    };
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch (err) {
+        if (err.name !== "AbortError") {
+          console.error("Share failed:", err);
+        }
+      }
+      return;
+    }
+
+    const showTemporaryLabel = (text) => {
+      label.textContent = text;
+      btn.classList.add("copied");
+      setTimeout(() => {
+        label.textContent = defaultLabel;
+        btn.classList.remove("copied");
+      }, 2000);
+    };
+
+    try {
+      await navigator.clipboard.writeText(shareData.url);
+      showTemporaryLabel("Link copied!");
+      return;
+    } catch (err) {
+      console.error("Clipboard API copy failed:", err);
+    }
+
+    try {
+      const textarea = document.createElement("textarea");
+      textarea.value = shareData.url;
+      textarea.style.position = "fixed";
+      textarea.style.opacity = "0";
+      document.body.appendChild(textarea);
+      textarea.select();
+      const copied = document.execCommand("copy");
+      document.body.removeChild(textarea);
+      if (!copied) throw new Error("execCommand copy returned false");
+      showTemporaryLabel("Link copied!");
+    } catch (err) {
+      console.error("Fallback copy failed:", err);
+      showTemporaryLabel("Couldn't copy — long-press to copy");
+    }
+  });
+}
+
 renderProfile();
 renderLinks();
+setupShare();
 document.getElementById("year").textContent = new Date().getFullYear();
