@@ -11,6 +11,6 @@ const LINKS = [
   { label: "Spotify", url: "https://open.spotify.com/", icon: "spotify" }, // TODO: replace with real link
   { label: "Apple Music", url: "https://music.apple.com/", icon: "apple" }, // TODO: replace with real link
   { label: "SoundCloud", url: "https://soundcloud.com/", icon: "soundcloud" }, // TODO: replace with real link
-  { label: "Instagram", url: "https://instagram.com/", icon: "instagram" }, // TODO: replace with real link
+  { label: "Instagram", url: "https://instagram.com/devrxddy", icon: "instagram" },
   { label: "TikTok", url: "https://tiktok.com/", icon: "tiktok" }, // TODO: replace with real link
 ];
