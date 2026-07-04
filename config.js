@@ -1,7 +1,7 @@
 // Edit this file to customize the page — no other files need to change.
 
 const PROFILE = {
-  name: "Devreddy",
+  name: "Devrxddy",
   bio: 'New single "alright" out now 🌌',
   avatar: "avatar.jpg", // put a square photo named avatar.jpg in this folder
 };
